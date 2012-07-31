@@ -1,0 +1,36 @@
+<idea-plugin version="2">
+  <name>Sieve</name>
+  <description>Sieve plugin</description>
+  <version>1.0</version>
+  <vendor>Surfront</vendor>
+  <idea-version since-build="8000"/>
+
+  <application-components>
+    <component>
+      <implementation-class>com.surfront.sieve.plugin.SieveSupportLoader</implementation-class>
+    </component>
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <fileTypeFactory implementation="com.surfront.sieve.plugin.file.SieveFileTypeFactory"/>
+    <quoteHandler fileType="Sieve" className="com.surfront.sieve.plugin.editor.SieveQuoteHandler"/>
+    <copyPastePreProcessor implementation="com.surfront.sieve.plugin.editor.SieveLiteralCopyPasteProcessor"/>
+    <completion.contributor language="Sieve" implementationClass="com.surfront.sieve.plugin.completion.SieveCompletionContributor"/>
+    <syntaxHighlighter key="Sieve" implementationClass="com.surfront.sieve.plugin.highlighter.SieveSyntaxHighlighter"/>
+    <lang.braceMatcher language="Sieve" implementationClass="com.surfront.sieve.plugin.highlighter.SievePairedBraceMatcher"/>
+    <annotator language="Sieve" implementationClass="com.surfront.sieve.plugin.annotator.SieveAnnotator"/>
+    <lang.parserDefinition language="Sieve" implementationClass="com.surfront.sieve.plugin.parser.SieveParserDefinition"/>
+    <lang.formatter language="Sieve" implementationClass="com.surfront.sieve.plugin.formatter.SieveFormattingModelBuilder"/>
+    <lang.commenter language="Sieve" implementationClass="com.surfront.sieve.plugin.commenter.SieveCommenter"/>
+    <lang.foldingBuilder language="Sieve" implementationClass="com.surfront.sieve.plugin.folding.SieveFoldingBuilder"/>
+    <!--<lang.literalEscaper language="Sieve" implementationClass="com.surfront.sieve.plugin.SieveLiteralEscaper"/>-->
+  </extensions>
+</idea-plugin>
