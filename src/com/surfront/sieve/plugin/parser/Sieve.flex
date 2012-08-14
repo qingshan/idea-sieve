@@ -1,4 +1,4 @@
-package com.surfront.sieve;
+package com.surfront.sieve.plugin.parser;
 
 import com.intellij.lexer.FlexLexer;
 import com.intellij.psi.tree.IElementType;
@@ -64,6 +64,8 @@ END_OF_LINE_COMMENT="#"[^\r\n]*
 "exists"              { yybegin(YYINITIAL); return SieveTokenTypes.EXISTS_KEYWORD; }
 "size"                { yybegin(YYINITIAL); return SieveTokenTypes.SIZE_KEYWORD; }
 "score"               { yybegin(YYINITIAL); return SieveTokenTypes.SCORE_KEYWORD; }
+"attribute"           { yybegin(YYINITIAL); return SieveTokenTypes.ATTRIBUTE_KEYWORD; }
+"analyze"             { yybegin(YYINITIAL); return SieveTokenTypes.ANALYZE_KEYWORD; }
 
 "("                   { yybegin(YYINITIAL); return SieveTokenTypes.LPAREN; }
 ")"                   { yybegin(YYINITIAL); return SieveTokenTypes.RPAREN; }

@@ -38,13 +38,15 @@ public interface SieveTokenTypes {
     IElementType EXISTS_KEYWORD = new SieveElementType("EXISTS_KEYWORD");
     IElementType SIZE_KEYWORD = new SieveElementType("SIZE_KEYWORD");
     IElementType SCORE_KEYWORD = new SieveElementType("SCORE_KEYWORD");
+    IElementType ANALYZE_KEYWORD = new SieveElementType("ANALYZE_KEYWORD");
+    IElementType ATTRIBUTE_KEYWORD = new SieveElementType("ATTRIBUTE_KEYWORD");
 
     TokenSet CONTROL_KEYWORDS = TokenSet.create(
             IF_KEYWORD, ELSIF_KEYWORD, ELSE_KEYWORD
     );
 
     TokenSet ACTION_KEYWORDS = TokenSet.create(
-            REQUIRE_KEYWORD, STOP_KEYWORD, DISCARD_KEYWORD, SCORE_KEYWORD
+            REQUIRE_KEYWORD, STOP_KEYWORD, DISCARD_KEYWORD, SCORE_KEYWORD, ANALYZE_KEYWORD
     );
 
     TokenSet TEST_KEYWORDS = TokenSet.create(
@@ -53,7 +55,7 @@ public interface SieveTokenTypes {
             ADDRESS_KEYWORD, ENVELOPE_KEYWORD, BODY_KEYWORD,
             ATTACHMENT_KEYWORD, MIME_KEYWORD, PREAMBLE_KEYWORD,
             URI_KEYWORD, IP_KEYWORD, EXISTS_KEYWORD, SIZE_KEYWORD,
-            SCORE_KEYWORD
+            SCORE_KEYWORD, ATTRIBUTE_KEYWORD
     );
 
     TokenSet KEYWORDS = TokenSet.orSet(
