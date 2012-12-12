@@ -59,7 +59,13 @@ public class SieveBlock implements Block {
     }
 
     public Spacing getSpacing(Block child1, Block child2) {
-        return new SieveSpacingProcessor(getNode(), ((SieveBlock) child1).getNode(), ((SieveBlock) child2).getNode()).getResult();
+        if (child1 instanceof SieveBlock && child2 instanceof SieveBlock) {
+            if (((SieveBlock) child1).getNode() == ((SieveBlock) child2).getNode()) {
+                return Spacing.getReadOnlySpacing();
+            }
+            return new SieveSpacingProcessor(getNode(), ((SieveBlock) child1).getNode(), ((SieveBlock) child2).getNode()).getResult();
+        }
+        return null;
     }
 
     public ChildAttributes getChildAttributes(final int newChildIndex) {

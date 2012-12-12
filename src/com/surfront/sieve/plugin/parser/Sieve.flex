@@ -64,8 +64,10 @@ END_OF_LINE_COMMENT="#"[^\r\n]*
 "exists"              { yybegin(YYINITIAL); return SieveTokenTypes.EXISTS_KEYWORD; }
 "size"                { yybegin(YYINITIAL); return SieveTokenTypes.SIZE_KEYWORD; }
 "score"               { yybegin(YYINITIAL); return SieveTokenTypes.SCORE_KEYWORD; }
-"attribute"           { yybegin(YYINITIAL); return SieveTokenTypes.ATTRIBUTE_KEYWORD; }
-"analyze"             { yybegin(YYINITIAL); return SieveTokenTypes.ANALYZE_KEYWORD; }
+"ruby"                { yybegin(YYINITIAL); return SieveTokenTypes.RUBY_KEYWORD; }
+"groovy"              { yybegin(YYINITIAL); return SieveTokenTypes.GROOVY_KEYWORD; }
+"inspect"             { yybegin(YYINITIAL); return SieveTokenTypes.INSPECT_KEYWORD; }
+"expression"          { yybegin(YYINITIAL); return SieveTokenTypes.EXPRESSION_KEYWORD; }
 
 "("                   { yybegin(YYINITIAL); return SieveTokenTypes.LPAREN; }
 ")"                   { yybegin(YYINITIAL); return SieveTokenTypes.RPAREN; }
