@@ -31,6 +31,5 @@
     <lang.formatter language="Sieve" implementationClass="com.surfront.sieve.plugin.formatter.SieveFormattingModelBuilder"/>
     <lang.commenter language="Sieve" implementationClass="com.surfront.sieve.plugin.commenter.SieveCommenter"/>
     <lang.foldingBuilder language="Sieve" implementationClass="com.surfront.sieve.plugin.folding.SieveFoldingBuilder"/>
-    <!--<lang.literalEscaper language="Sieve" implementationClass="com.surfront.sieve.plugin.SieveLiteralEscaper"/>-->
   </extensions>
 </idea-plugin>
