@@ -1,0 +1,11 @@
+if allof (
+        size :under 1K,
+        not exists "X-Mailer",
+        attachment :count "ge" "1",
+        attachment :contains :comparator "i;octet" :name ".exe",
+        header :regex :comparator "i;octet" "Subject" "^\\S+\\d+:\\d+:\\d+$",
+        body :regex :comparator "i;octet" :content "text/html" "\"></HEAD>\\r\\n<BODY>[a-z0-9]+="
+        ) {
+    discard;
+    stop;
+}
