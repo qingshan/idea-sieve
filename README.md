@@ -23,9 +23,9 @@ A language plugin for IntelliJ IDEA that provide basic support for Sieve filteri
 templates/sieve.xml is for IntelliJ IDEA Live Templates, Copy the xml file to the live templates directory (
 See note from [Live Templates](https://www.jetbrains.com/idea/webhelp/live-templates.html)):
 
- * Windows: `<your home directory>\.<product name><version number>\config\templates`
- * Linux: `~\.<product name><version number>\config\templates`
- * MacOS: `~/Library/Preferences/<product name><version number>/templates`
+ * Windows: `<your_user_home_directory>\.IntelliJ IDEA<version_number>\config\templates`
+ * Linux: `~IntelliJ IDEA<version>/config/templates`
+ * MacOS: `~/Library/Preferences/IntelliJ IDEA<version>/templates`
 
 ## Building
 
