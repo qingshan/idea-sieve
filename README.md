@@ -14,9 +14,18 @@ A language plugin for IntelliJ IDEA that provide basic support for Sieve filteri
 
 1. Get the plugin 
     - from [releases](https://github.com/qingshan/idea-sieve/releases)
-    - Or compile it yourself (see -Development-)
+    - Or compile it yourself (see -Building-)
 2. Install plugin (Preferences -> Plugins -> Install plugin from disk)
 3. Create .siv file (or open examples/*.siv files) and enjoy
+
+## Live Templates
+
+templates/sieve.xml is for IntelliJ IDEA Live Templates, Copy the xml file to the live templates directory (
+See note from [Live Templates](https://www.jetbrains.com/idea/webhelp/live-templates.html)):
+
+ * Windows: `<your home directory>\.<product name><version number>\config\templates`
+ * Linux: `~\.<product name><version number>\config\templates`
+ * MacOS: `~/Library/Preferences/<product name><version number>/templates`
 
 ## Building
 

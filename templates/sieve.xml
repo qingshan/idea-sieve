@@ -1,0 +1,662 @@
+<templateSet group="sieve">
+  <template name="si" value="header :is :comparator &quot;i;octet&quot; &quot;Subject&quot; &quot;$END$&quot; " description="subject is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="isi" value="if header :is :comparator &quot;i;octet&quot; &quot;Subject&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if subject is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="sii" value="header :is &quot;Subject&quot; &quot;$END$&quot; " description="subject is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="isii" value="if header :is &quot;Subject&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if subject is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="sc" value="header :contains :comparator &quot;i;octet&quot; &quot;Subject&quot; &quot;$END$&quot; " description="subject contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="isc" value="if header :contains :comparator &quot;i;octet&quot; &quot;Subject&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if subject contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="sci" value="header :contains &quot;Subject&quot; &quot;$END$&quot; " description="subject contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="isci" value="if header :contains &quot;Subject&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if subject contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="sm" value="header :matches :comparator &quot;i;octet&quot; &quot;Subject&quot; &quot;$END$&quot; " description="subject matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ism" value="if header :matches :comparator &quot;i;octet&quot; &quot;Subject&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if subject matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="smi" value="header :matches &quot;Subject&quot; &quot;$END$&quot; " description="subject matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ismi" value="if header :matches &quot;Subject&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if subject matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="sr" value="header :regex :comparator &quot;i;octet&quot; &quot;Subject&quot; &quot;$END$&quot; " description="subject regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="isr" value="if header :regex :comparator &quot;i;octet&quot; &quot;Subject&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if subject regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="sri" value="header :regex &quot;Subject&quot; &quot;$END$&quot; " description="subject regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="isri" value="if header :regex &quot;Subject&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if subject regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="fi" value="header :is :comparator &quot;i;octet&quot; &quot;From&quot; &quot;$END$&quot; " description="from is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ifi" value="if header :is :comparator &quot;i;octet&quot; &quot;From&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if from is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="fii" value="header :is &quot;From&quot; &quot;$END$&quot; " description="from is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ifii" value="if header :is &quot;From&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if from is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="fc" value="header :contains :comparator &quot;i;octet&quot; &quot;From&quot; &quot;$END$&quot; " description="from contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ifc" value="if header :contains :comparator &quot;i;octet&quot; &quot;From&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if from contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="fci" value="header :contains &quot;From&quot; &quot;$END$&quot; " description="from contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ifci" value="if header :contains &quot;From&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if from contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="fm" value="header :matches :comparator &quot;i;octet&quot; &quot;From&quot; &quot;$END$&quot; " description="from matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ifm" value="if header :matches :comparator &quot;i;octet&quot; &quot;From&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if from matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="fmi" value="header :matches &quot;From&quot; &quot;$END$&quot; " description="from matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ifmi" value="if header :matches &quot;From&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if from matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="fr" value="header :regex :comparator &quot;i;octet&quot; &quot;From&quot; &quot;$END$&quot; " description="from regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ifr" value="if header :regex :comparator &quot;i;octet&quot; &quot;From&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if from regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="fri" value="header :regex &quot;From&quot; &quot;$END$&quot; " description="from regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ifri" value="if header :regex &quot;From&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if from regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="xi" value="header :is :comparator &quot;i;octet&quot; &quot;X-Mailer&quot; &quot;$END$&quot; " description="xmailer is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ixi" value="if header :is :comparator &quot;i;octet&quot; &quot;X-Mailer&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if xmailer is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="xii" value="header :is &quot;X-Mailer&quot; &quot;$END$&quot; " description="xmailer is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ixii" value="if header :is &quot;X-Mailer&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if xmailer is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="xc" value="header :contains :comparator &quot;i;octet&quot; &quot;X-Mailer&quot; &quot;$END$&quot; " description="xmailer contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ixc" value="if header :contains :comparator &quot;i;octet&quot; &quot;X-Mailer&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if xmailer contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="xci" value="header :contains &quot;X-Mailer&quot; &quot;$END$&quot; " description="xmailer contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ixci" value="if header :contains &quot;X-Mailer&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if xmailer contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="xm" value="header :matches :comparator &quot;i;octet&quot; &quot;X-Mailer&quot; &quot;$END$&quot; " description="xmailer matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ixm" value="if header :matches :comparator &quot;i;octet&quot; &quot;X-Mailer&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if xmailer matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="xmi" value="header :matches &quot;X-Mailer&quot; &quot;$END$&quot; " description="xmailer matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ixmi" value="if header :matches &quot;X-Mailer&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if xmailer matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="xr" value="header :regex :comparator &quot;i;octet&quot; &quot;X-Mailer&quot; &quot;$END$&quot; " description="xmailer regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ixr" value="if header :regex :comparator &quot;i;octet&quot; &quot;X-Mailer&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if xmailer regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="xri" value="header :regex &quot;X-Mailer&quot; &quot;$END$&quot; " description="xmailer regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ixri" value="if header :regex &quot;X-Mailer&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if xmailer regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ui" value="uri :is :comparator &quot;i;octet&quot; &quot;$END$&quot; " description="uri is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iui" value="if uri :is :comparator &quot;i;octet&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if uri is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="uii" value="uri :is &quot;$END$&quot; " description="uri is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iuii" value="if uri :is &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if uri is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="uc" value="uri :contains :comparator &quot;i;octet&quot; &quot;$END$&quot; " description="uri contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iuc" value="if uri :contains :comparator &quot;i;octet&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if uri contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="uci" value="uri :contains &quot;$END$&quot; " description="uri contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iuci" value="if uri :contains &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if uri contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="um" value="uri :matches :comparator &quot;i;octet&quot; &quot;$END$&quot; " description="uri matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ium" value="if uri :matches :comparator &quot;i;octet&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if uri matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="umi" value="uri :matches &quot;$END$&quot; " description="uri matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iumi" value="if uri :matches &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if uri matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ur" value="uri :regex :comparator &quot;i;octet&quot; &quot;$END$&quot; " description="uri regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iur" value="if uri :regex :comparator &quot;i;octet&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if uri regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="uri" value="uri :regex &quot;$END$&quot; " description="uri regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iuri" value="if uri :regex &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if uri regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ai" value="attachment :is :comparator &quot;i;octet&quot; :name &quot;$END$&quot; " description="attachment is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iai" value="if attachment :is :comparator &quot;i;octet&quot; :name &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if attachment is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="aii" value="attachment :is :name &quot;$END$&quot; " description="attachment is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iaii" value="if attachment :is :name &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if attachment is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ac" value="attachment :contains :comparator &quot;i;octet&quot; :name &quot;$END$&quot; " description="attachment contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iac" value="if attachment :contains :comparator &quot;i;octet&quot; :name &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if attachment contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="aci" value="attachment :contains :name &quot;$END$&quot; " description="attachment contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iaci" value="if attachment :contains :name &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if attachment contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="am" value="attachment :matches :comparator &quot;i;octet&quot; :name &quot;$END$&quot; " description="attachment matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iam" value="if attachment :matches :comparator &quot;i;octet&quot; :name &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if attachment matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ami" value="attachment :matches :name &quot;$END$&quot; " description="attachment matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iami" value="if attachment :matches :name &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if attachment matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ar" value="attachment :regex :comparator &quot;i;octet&quot; :name &quot;$END$&quot; " description="attachment regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iar" value="if attachment :regex :comparator &quot;i;octet&quot; :name &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if attachment regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ari" value="attachment :regex :name &quot;$END$&quot; " description="attachment regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iari" value="if attachment :regex :name &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if attachment regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ci" value="header :is :comparator &quot;i;octet&quot; &quot;Content-Type&quot; &quot;$END$&quot; " description="content-type is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ici" value="if header :is :comparator &quot;i;octet&quot; &quot;Content-Type&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if content-type is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="cii" value="header :is &quot;Content-Type&quot; &quot;$END$&quot; " description="content-type is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="icii" value="if header :is &quot;Content-Type&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if content-type is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="cc" value="header :contains :comparator &quot;i;octet&quot; &quot;Content-Type&quot; &quot;$END$&quot; " description="content-type contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="icc" value="if header :contains :comparator &quot;i;octet&quot; &quot;Content-Type&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if content-type contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="cci" value="header :contains &quot;Content-Type&quot; &quot;$END$&quot; " description="content-type contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="icci" value="if header :contains &quot;Content-Type&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if content-type contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="cm" value="header :matches :comparator &quot;i;octet&quot; &quot;Content-Type&quot; &quot;$END$&quot; " description="content-type matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="icm" value="if header :matches :comparator &quot;i;octet&quot; &quot;Content-Type&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if content-type matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="cmi" value="header :matches &quot;Content-Type&quot; &quot;$END$&quot; " description="content-type matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="icmi" value="if header :matches &quot;Content-Type&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if content-type matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="cr" value="header :regex :comparator &quot;i;octet&quot; &quot;Content-Type&quot; &quot;$END$&quot; " description="content-type regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="icr" value="if header :regex :comparator &quot;i;octet&quot; &quot;Content-Type&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if content-type regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="cri" value="header :regex &quot;Content-Type&quot; &quot;$END$&quot; " description="content-type regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="icri" value="if header :regex &quot;Content-Type&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if content-type regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="bi" value="body :is :comparator &quot;i;octet&quot; :text &quot;$END$&quot; " description="body is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ibi" value="if body :is :comparator &quot;i;octet&quot; :text &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if body is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="bii" value="body :is :text &quot;$END$&quot; " description="body is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ibii" value="if body :is :text &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if body is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="bc" value="body :contains :comparator &quot;i;octet&quot; :text &quot;$END$&quot; " description="body contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ibc" value="if body :contains :comparator &quot;i;octet&quot; :text &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if body contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="bci" value="body :contains :text &quot;$END$&quot; " description="body contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ibci" value="if body :contains :text &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if body contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="bm" value="body :matches :comparator &quot;i;octet&quot; :text &quot;$END$&quot; " description="body matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ibm" value="if body :matches :comparator &quot;i;octet&quot; :text &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if body matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="bmi" value="body :matches :text &quot;$END$&quot; " description="body matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ibmi" value="if body :matches :text &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if body matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="br" value="body :regex :comparator &quot;i;octet&quot; :text &quot;$END$&quot; " description="body regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ibr" value="if body :regex :comparator &quot;i;octet&quot; :text &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if body regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="bri" value="body :regex :text &quot;$END$&quot; " description="body regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ibri" value="if body :regex :text &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if body regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="hi" value="body :is :comparator &quot;i;octet&quot; :content &quot;text/html&quot; &quot;$END$&quot; " description="html is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ihi" value="if body :is :comparator &quot;i;octet&quot; :content &quot;text/html&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if html is case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="hii" value="body :is :content &quot;text/html&quot; &quot;$END$&quot; " description="html is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ihii" value="if body :is :content &quot;text/html&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if html is ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="hc" value="body :contains :comparator &quot;i;octet&quot; :content &quot;text/html&quot; &quot;$END$&quot; " description="html contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ihc" value="if body :contains :comparator &quot;i;octet&quot; :content &quot;text/html&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if html contains case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="hci" value="body :contains :content &quot;text/html&quot; &quot;$END$&quot; " description="html contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ihci" value="if body :contains :content &quot;text/html&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if html contains ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="hm" value="body :matches :comparator &quot;i;octet&quot; :content &quot;text/html&quot; &quot;$END$&quot; " description="html matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ihm" value="if body :matches :comparator &quot;i;octet&quot; :content &quot;text/html&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if html matches case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="hmi" value="body :matches :content &quot;text/html&quot; &quot;$END$&quot; " description="html matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ihmi" value="if body :matches :content &quot;text/html&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if html matches ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="hr" value="body :regex :comparator &quot;i;octet&quot; :content &quot;text/html&quot; &quot;$END$&quot; " description="html regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ihr" value="if body :regex :comparator &quot;i;octet&quot; :content &quot;text/html&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if html regex case sensentive" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="hri" value="body :regex :content &quot;text/html&quot; &quot;$END$&quot; " description="html regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ihri" value="if body :regex :content &quot;text/html&quot; &quot;$END$&quot; {&#10;    discard;&#10;    stop;&#10;} " description="if html regex ignore case" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="all" value="allof (&#10;$END$) " description="allof" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="iall" value="if allof (&#10;$END$) {&#10;    discard;&#10;    stop;&#10;} " description="if allof" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="size" value="size :under $END$K " description="size :under" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="isize" value="if size :under $END$K {&#10;    discard;&#10;    stop;&#10;} " description="if size :under" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>
